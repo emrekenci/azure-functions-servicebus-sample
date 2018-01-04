@@ -17,12 +17,12 @@ namespace EnqueueDequeueFunctions
         /// access the instance of the Microsoft.Azure.ServiceBus.Message class with it's full details.
         /// </param>
         /// <param name="log"></param>
-        [FunctionName("Dequeue")]
+        [FunctionName("dequeue")]
         public static void Run([ServiceBusTrigger("myqueue", AccessRights.Manage, Connection = "ServiceBusConnectionString")]string queueMessageContent, TraceWriter log)
         {
             try
             {
-                log.Info("Queue message body:" + queueMessageContent);
+                log.Info("Dequeued task: " + queueMessageContent);
             }
             catch (Exception e)
             {

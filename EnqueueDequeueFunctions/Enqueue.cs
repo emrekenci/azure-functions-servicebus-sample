@@ -13,6 +13,9 @@ namespace EnqueueDequeueFunctions
 
     public static class Enqueue
     {
+        /// <summary>
+        /// Sends the request's body to the specified service bus queue.
+        /// </summary>
         [FunctionName("enqueue")]
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "post")]HttpRequestMessage req, TraceWriter log)
         {
@@ -30,6 +33,8 @@ namespace EnqueueDequeueFunctions
                 var message = new Message(messageBytes);
 
                 await queueClient.SendAsync(message);
+
+                log.Info("Enqueued task: " + requestBody);
 
                 return req.CreateResponse(HttpStatusCode.OK);
             }
