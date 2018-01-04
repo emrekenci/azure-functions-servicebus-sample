@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=ekfunctionsstorage;AccountKey=/TqRYs96TgRfAYKJ5LIRuf46ANiOBTSJVVA0S0BQwQNqUBAjJP323xDbVAaYLNXa4OJrD2YUG9oKPfh0fEkwCA==",
+    "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=ekfunctionsstorage;AccountKey=/TqRYs96TgRfAYKJ5LIRuf46ANiOBTSJVVA0S0BQwQNqUBAjJP323xDbVAaYLNXa4OJrD2YUG9oKPfh0fEkwCA==",
+    "ServiceBusConnectionString": "Endpoint=sb://ek-esb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=rRjE5eLQEGRYGJR0Jfurpo7UoMxXmoK2PRO8X5w55jQ=",
+    "ServiceBusQueueName": "myqueue"
+  }
+}
